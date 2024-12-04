@@ -1,0 +1,49 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BrownianMotionAPP.ViewModels"
+             x:Class="BrownianMotionAPP.MainPage">
+
+    <!-- ViewModel vinculado -->
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <!-- Grade principal para divisão horizontal -->
+    <Grid ColumnDefinitions="3*, 1*">
+        <!-- 3 partes para o gráfico, 1 para os comandos -->
+
+        <!-- Gráfico ocupa 3/4 da largura -->
+        <GraphicsView Grid.Column="0"
+                      Drawable="{Binding ChartDrawable}" 
+                      BackgroundColor="White" />
+
+        <!-- Comandos ocupam 1/4 da largura -->
+        <StackLayout Grid.Column="1" 
+                     Padding="10" 
+                     Spacing="10" 
+                     BackgroundColor="LightGray"
+                     Margin="5">
+            <Label Text="Parâmetros da Simulação" 
+                   FontAttributes="Bold" 
+                   FontSize="20" 
+                   HorizontalOptions="Center" />
+
+            <!-- Campos para entrada -->
+            <Label Text="Preço Inicial:" />
+            <Entry Text="{Binding InitialPrice}" Keyboard="Numeric" Placeholder="Ex.: 100" />
+
+            <Label Text="Volatilidade:" />
+            <Entry Text="{Binding Volatility}" Keyboard="Numeric" Placeholder="Ex.: 0.2" />
+
+            <Label Text="Média do Retorno:" />
+            <Entry Text="{Binding MeanReturn}" Keyboard="Numeric" Placeholder="Ex.: 0.05" />
+
+            <Label Text="Tempo (em anos):" />
+            <Entry Text="{Binding Time}" Keyboard="Numeric" Placeholder="Ex.: 1" />
+
+            <!-- Botão -->
+            <Button Text="Gerar Gráfico" Command="{Binding GenerateCommand}" HorizontalOptions="Center" />
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
