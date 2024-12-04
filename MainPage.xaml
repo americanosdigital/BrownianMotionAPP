@@ -15,7 +15,16 @@
         <!-- Gráfico ocupa 3/4 da largura -->
         <GraphicsView Grid.Column="0"
                       Drawable="{Binding ChartDrawable}" 
-                      BackgroundColor="White" />
+                      BackgroundColor="LightBlue"
+                      HeightRequest="300"
+                      WidthRequest="300"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      >
+            <GraphicsView.GestureRecognizers>
+                <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
+            </GraphicsView.GestureRecognizers>
+        </GraphicsView>
 
         <!-- Comandos ocupam 1/4 da largura -->
         <StackLayout Grid.Column="1" 
@@ -27,19 +36,22 @@
                    FontAttributes="Bold" 
                    FontSize="20" 
                    HorizontalOptions="Center" />
+            <Label Text="Zoom" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Button Text="Zoom In" Command="{Binding ZoomInCommand}" />
+            <Button Text="Zoom Out" Command="{Binding ZoomOutCommand}" />
 
             <!-- Campos para entrada -->
             <Label Text="Preço Inicial:" />
             <Entry Text="{Binding InitialPrice}" Keyboard="Numeric" Placeholder="Ex.: 100" />
 
-            <Label Text="Volatilidade:" />
-            <Entry Text="{Binding Volatility}" Keyboard="Numeric" Placeholder="Ex.: 0.2" />
+            <Label Text="Volatilidade média(%):" />
+            <Entry Text="{Binding Volatility, Mode=TwoWay, StringFormat='{}{0:F2}'}"  Keyboard="Numeric" Placeholder="Ex.: 0.2" />
 
-            <Label Text="Média do Retorno:" />
+            <Label Text="Retorno média(%):" />
             <Entry Text="{Binding MeanReturn}" Keyboard="Numeric" Placeholder="Ex.: 0.05" />
 
-            <Label Text="Tempo (em anos):" />
-            <Entry Text="{Binding Time}" Keyboard="Numeric" Placeholder="Ex.: 1" />
+            <Label Text="Tempo(em dias):" />
+            <Entry Text="{Binding TimeInDays}" Keyboard="Numeric" Placeholder="Ex.: 30" />
 
             <!-- Botão -->
             <Button Text="Gerar Gráfico" Command="{Binding GenerateCommand}" HorizontalOptions="Center" />
