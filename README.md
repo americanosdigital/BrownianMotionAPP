@@ -1,4 +1,5 @@
 Brownian Motion Simulator
+
 Descrição
 Este projeto é uma aplicação .NET MAUI que simula o movimento browniano, utilizado em finanças para modelar o comportamento estocástico dos preços. A aplicação gera um gráfico representando o movimento browniano com base em parâmetros fornecidos pelo usuário. Ela permite a visualização interativa do gráfico com funcionalidades de zoom e personalização.
 
