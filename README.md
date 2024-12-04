@@ -1,59 +1,59 @@
 # BrownianMotionAPP
 
 Brownian Motion Simulator
-Descri√ß√£o
-Este projeto √© uma aplica√ß√£o .NET MAUI que simula o movimento browniano, utilizado em finan√ßas para modelar o comportamento estoc√°stico dos pre√ßos. A aplica√ß√£o gera um gr√°fico representando o movimento browniano com base em par√¢metros fornecidos pelo usu√°rio. Ela permite a visualiza√ß√£o interativa do gr√°fico com funcionalidades de zoom e personaliza√ß√£o.
+DescriÁ„o
+Este projeto È uma aplicaÁ„o .NET MAUI que simula o movimento browniano, utilizado em finanÁas para modelar o comportamento estoc·stico dos preÁos. A aplicaÁ„o gera um gr·fico representando o movimento browniano com base em par‚metros fornecidos pelo usu·rio. Ela permite a visualizaÁ„o interativa do gr·fico com funcionalidades de zoom e personalizaÁ„o.
 Funcionalidades
-‚Ä¢	Gera√ß√£o do gr√°fico de movimento browniano: A simula√ß√£o √© realizada com base nos par√¢metros inseridos pelo usu√°rio, como pre√ßo inicial, volatilidade, m√©dia de retorno e tempo (em dias).
-‚Ä¢	Zoom interativo: Permite que o usu√°rio fa√ßa zoom no gr√°fico, seja utilizando os bot√µes de zoom ou gestos de pinch.
-‚Ä¢	Interface intuitiva: A aplica√ß√£o tem uma interface simples e f√°cil de usar, feita com .NET MAUI e padr√£o MVVM.
+ï	GeraÁ„o do gr·fico de movimento browniano: A simulaÁ„o È realizada com base nos par‚metros inseridos pelo usu·rio, como preÁo inicial, volatilidade, mÈdia de retorno e tempo (em dias).
+ï	Zoom interativo: Permite que o usu·rio faÁa zoom no gr·fico, seja utilizando os botıes de zoom ou gestos de pinch.
+ï	Interface intuitiva: A aplicaÁ„o tem uma interface simples e f·cil de usar, feita com .NET MAUI e padr„o MVVM.
 Tecnologias Utilizadas
-‚Ä¢	.NET 8
-‚Ä¢	.NET MAUI para a interface gr√°fica.
-‚Ä¢	C# para a implementa√ß√£o da l√≥gica de neg√≥cios e gera√ß√£o do gr√°fico.
-‚Ä¢	Pinch Gesture para implementar o zoom interativo.
+ï	.NET 8
+ï	.NET MAUI para a interface gr·fica.
+ï	C# para a implementaÁ„o da lÛgica de negÛcios e geraÁ„o do gr·fico.
+ï	Pinch Gesture para implementar o zoom interativo.
 Estrutura do Projeto
-‚Ä¢	MainPage.xaml: Interface gr√°fica onde o usu√°rio interage com a aplica√ß√£o.
-‚Ä¢	MainViewModel.cs: Cont√©m a l√≥gica de neg√≥cios, como a gera√ß√£o dos dados do gr√°fico e controle de zoom.
-‚Ä¢	ChartDrawable.cs: Classe respons√°vel por desenhar o gr√°fico de movimento browniano com base nos dados.
-‚Ä¢	BrownianMotionModel.cs: Cont√©m o c√≥digo para gerar o movimento browniano a partir dos par√¢metros fornecidos.
+ï	MainPage.xaml: Interface gr·fica onde o usu·rio interage com a aplicaÁ„o.
+ï	MainViewModel.cs: ContÈm a lÛgica de negÛcios, como a geraÁ„o dos dados do gr·fico e controle de zoom.
+ï	ChartDrawable.cs: Classe respons·vel por desenhar o gr·fico de movimento browniano com base nos dados.
+ï	BrownianMotionModel.cs: ContÈm o cÛdigo para gerar o movimento browniano a partir dos par‚metros fornecidos.
 Como Rodar o Projeto
-Pr√©-requisitos
-1.	Instalar o .NET 8 SDK: Certifique-se de ter o .NET 8 SDK instalado. Voc√™ pode baix√°-lo aqui.
+PrÈ-requisitos
+1.	Instalar o .NET 8 SDK: Certifique-se de ter o .NET 8 SDK instalado. VocÍ pode baix·-lo aqui.
 2.	Instalar o Visual Studio com o suporte para .NET MAUI.
 3.	Configurar o ambiente para rodar aplicativos .NET MAUI em um emulador ou dispositivo.
 Passos para executar
-1.	Clone o reposit√≥rio:
+1.	Clone o repositÛrio:
 bash
-Copiar c√≥digo
+Copiar cÛdigo
 git clone https://github.com/seu-usuario/BrownianMotionSimulator.git
-2.	Navegue at√© o diret√≥rio do projeto:
+2.	Navegue atÈ o diretÛrio do projeto:
 bash
-Copiar c√≥digo
+Copiar cÛdigo
 cd BrownianMotionSimulator
 3.	Abra o projeto no Visual Studio.
-4.	Selecione o emulador ou dispositivo para rodar a aplica√ß√£o.
-5.	Execute a aplica√ß√£o clicando no bot√£o "Iniciar" no Visual Studio.
-6.	Insira os par√¢metros de simula√ß√£o (pre√ßo inicial, volatilidade, m√©dia de retorno, tempo) e clique em "Gerar Gr√°fico". Utilize os bot√µes de zoom ou gestos de pinch para interagir com o gr√°fico.
-Par√¢metros de Entrada
-1.	Pre√ßo Inicial: O valor inicial do ativo.
+4.	Selecione o emulador ou dispositivo para rodar a aplicaÁ„o.
+5.	Execute a aplicaÁ„o clicando no bot„o "Iniciar" no Visual Studio.
+6.	Insira os par‚metros de simulaÁ„o (preÁo inicial, volatilidade, mÈdia de retorno, tempo) e clique em "Gerar Gr·fico". Utilize os botıes de zoom ou gestos de pinch para interagir com o gr·fico.
+Par‚metros de Entrada
+1.	PreÁo Inicial: O valor inicial do ativo.
 2.	Volatilidade: A volatilidade do ativo (expressa como uma porcentagem).
-3.	M√©dia de Retorno: A m√©dia de retorno do ativo (expressa como uma porcentagem).
-4.	Tempo (em dias): O n√∫mero de dias para o qual a simula√ß√£o ser√° realizada.
+3.	MÈdia de Retorno: A mÈdia de retorno do ativo (expressa como uma porcentagem).
+4.	Tempo (em dias): O n˙mero de dias para o qual a simulaÁ„o ser· realizada.
 Funcionalidade de Zoom
-‚Ä¢	Zoom In: Aumenta o zoom do gr√°fico.
-‚Ä¢	Zoom Out: Diminui o zoom do gr√°fico.
-‚Ä¢	Pinch Gesture: Permite o zoom utilizando gestos de pinch no gr√°fico.
+ï	Zoom In: Aumenta o zoom do gr·fico.
+ï	Zoom Out: Diminui o zoom do gr·fico.
+ï	Pinch Gesture: Permite o zoom utilizando gestos de pinch no gr·fico.
 Como Contribuir
-1.	Fa√ßa um fork do reposit√≥rio.
-2.	Crie uma branch para sua feature ou corre√ß√£o (git checkout -b feature/MinhaFeature).
-3.	Fa√ßa commit das suas mudan√ßas (git commit -m 'Adicionando minha feature').
+1.	FaÁa um fork do repositÛrio.
+2.	Crie uma branch para sua feature ou correÁ„o (git checkout -b feature/MinhaFeature).
+3.	FaÁa commit das suas mudanÁas (git commit -m 'Adicionando minha feature').
 4.	Push para a branch (git push origin feature/MinhaFeature).
-5.	Abra um Pull Request no reposit√≥rio original.
-Licen√ßa
-Este projeto √© licenciado sob a Licen√ßa MIT - veja o arquivo LICENSE para mais detalhes.
+5.	Abra um Pull Request no repositÛrio original.
+LicenÁa
+Este projeto È licenciado sob a LicenÁa MIT - veja o arquivo LICENSE para mais detalhes.
 ________________________________________
 Exemplos de Uso
-1.	Gerar Gr√°fico: Ao inserir os par√¢metros como pre√ßo inicial, volatilidade, m√©dia de retorno e tempo, clique em "Gerar Gr√°fico" para visualizar a simula√ß√£o.
-2.	Zoom: Utilize os bot√µes de zoom ou fa√ßa gestos de pinch para ampliar ou reduzir a visualiza√ß√£o do gr√°fico.
+1.	Gerar Gr·fico: Ao inserir os par‚metros como preÁo inicial, volatilidade, mÈdia de retorno e tempo, clique em "Gerar Gr·fico" para visualizar a simulaÁ„o.
+2.	Zoom: Utilize os botıes de zoom ou faÁa gestos de pinch para ampliar ou reduzir a visualizaÁ„o do gr·fico.
 
